@@ -128,12 +128,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     let tab = document.querySelectorAll('.tab_link'),
-        line = document.querySelectorAll('.line');
+        line = document.querySelectorAll('.line'),
         slider = document.querySelector('.glazing_slider'),
         tabContent = document.querySelectorAll('.tab_content'),
         decTab = document.querySelectorAll('.dec_tab'),
         decContent = document.querySelector('.decoration_slider'),
-        decTabContent = document.querySelectorAll('.dec_tab_content'),
+        decTabContent = document.querySelectorAll('.dec_tab_content');
        
         
 
@@ -225,9 +225,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // Pictures
 
-    let shown = document.querySelector('.overlay');
+    let shown = document.querySelector('.overlay'),
         img = document.createElement("IMG"),
-        imgLink = document.querySelectorAll('.img_link'),
+        imgLink = document.querySelectorAll('.img_link');
        
 
     function closeImage() {
