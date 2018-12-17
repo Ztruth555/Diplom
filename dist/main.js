@@ -321,6 +321,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // Calcalator
 
     let data_calc = {};
+    
 
    
 
