@@ -155,6 +155,13 @@ textarea:focus {
   background: url(../img/glazing/line.png) 0 0 no-repeat;
 }
 
+.hide {
+  display:none;
+}
+.show {
+  display: block;
+}
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -220,13 +227,13 @@ textarea:focus {
   font-style: normal;
   color: #55a831;
   /*p {
-				display: inline-block;
-			vertical-align: top;
-				font-size: 1.4rem;
-				line-height: 1.2;
-				.bold();
-				color: @green;
-			}*/
+                display: inline-block;
+            vertical-align: top;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                .bold();
+                color: @green;
+            }*/
 }
 
 .header_btn_wrap {
@@ -381,9 +388,9 @@ textarea:focus {
   font-weight: 600;
   text-decoration: underline;
   /*&:focus {
-				text-decoration: none;
-				color: #454545;
-			}*/
+                text-decoration: none;
+                color: #454545;
+            }*/
 }
 
 .glazing_block a:hover {
@@ -493,14 +500,14 @@ textarea:focus {
 
 /*test*/
 /*.tabs li {
-	display: inline-block;
+    display: inline-block;
 }
 .tabs .glazing_block.active  a {
-			text-decoration: none;
-			color: #454545;
+            text-decoration: none;
+            color: #454545;
 }
 .tabs_divs .noactive {
-	display: none;
+    display: none;
 }*/
 /*/test*/
 /*Decoration*/
@@ -530,13 +537,13 @@ textarea:focus {
   text-decoration: none;
   color: #0089cd;
   /*border-top: 1rem solid @blue;
-				height: 8rem;
-				padding: 2rem 1rem;
-				background: -webkit-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: -moz-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: -o-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: -ms-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);*/
+                height: 8rem;
+                padding: 2rem 1rem;
+                background: -webkit-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
+                background: -moz-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
+                background: -o-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
+                background: -ms-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);*/
 }
 
 .decoration_item .no_click {
@@ -889,14 +896,14 @@ textarea:focus {
 
 .img_works {
   /*   display: none; */
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #ffffff;
-  max-height: 550px;
-  z-index: 100;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    max-height: 550px;
+    z-index: 100;
   
 }
 
@@ -1020,10 +1027,10 @@ textarea:focus {
   padding: 1rem 5rem 4rem;
   background-color: #ffffff;
   /*	label {
-			margin-bottom: 1rem;
-			font-size: 1.5rem;
-			.regular();
-		}*/
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            .regular();
+        }*/
 }
 
 .popup_calc_profile_content h2 {
@@ -1183,10 +1190,10 @@ textarea:focus {
   }
 
   /*.contacts {
-		.map {
-			width: 100%;
-		}
-	}*/
+        .map {
+            width: 100%;
+        }
+    }*/
 }
 
 @media (max-width: 991px) {
