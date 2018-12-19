@@ -148,7 +148,6 @@ function forms() {
         popUpCalc.style.display = 'none';
         calcData.calcWidth = width.value;
         calcData.calcHeight = height.value;
-
     });
 
     calcMiddleButton.addEventListener('click', function () {
@@ -170,10 +169,14 @@ function forms() {
         calcData.phone = document.querySelector('.final_phone').value;
         document.body.style.overflow = '';
 
-        let finalJson = JSON.stringify(calcData);
+       // let finalJson = JSON.stringify(calcData);
+       let formData = new FormData(this);
+       let obj = {};
+       formData.forEach((value, key) => obj[key] = value);
+       let json = JSON.stringify(obj);
 
 
-        function postFinalData() {
+        function postFinalData(data) {
             return new Promise(function (resolve, reject) {
                 let request = new XMLHttpRequest();
 
@@ -191,7 +194,7 @@ function forms() {
                     }
                 }
 
-                request.send(finalJson);
+                request.send(data);
             });
         }
 
@@ -201,7 +204,7 @@ function forms() {
             }
         }
 
-        postFinalData(calcData)
+        postFinalData(json)
             .then(() => statusMessage.innerHTML = message.loading)
             .then(() => statusMessage.innerHTML = message.success)
             .catch(() => statusMessage.innerHTML = message.failure)
