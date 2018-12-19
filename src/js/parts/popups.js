@@ -1,4 +1,4 @@
-function popUps() {
+function popups() {
 
     // Popup
 
@@ -65,4 +65,4 @@ function popUps() {
 
 }
 
-module.exports = popUps;
+module.exports = popups;
