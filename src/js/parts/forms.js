@@ -73,8 +73,10 @@ function forms() {
         finalButton = document.querySelector('.final'),
         overlay = document.querySelector('.overlay');
 
+
     let calcData = {};
 
+    
 
 
     width.addEventListener('input', function () {
@@ -91,12 +93,14 @@ function forms() {
         popUpCalc.style.display = 'block';
         overlay.style.display = 'block';
         document.body.style.overflow = 'hidden';
+
     }
 
     function closeCalcModal() {
         popUpCalc.style.display = 'none';
         overlay.style.display = 'none';
         document.body.style.overflow = '';
+
     }
 
     for (let i = 0; i < glazingBtn.length; i++) {
@@ -148,6 +152,8 @@ function forms() {
         popUpCalc.style.display = 'none';
         calcData.calcWidth = width.value;
         calcData.calcHeight = height.value;
+        calcData.type = document.querySelector('#view_type').value;
+
     });
 
     calcMiddleButton.addEventListener('click', function () {
@@ -158,8 +164,6 @@ function forms() {
         calcData.cold = checkboxTag[0].checked;
         calcData.warm = checkboxTag[1].checked;
         calcData.type = document.querySelector('#view_type').value;
-
-
     });
 
     finalButton.addEventListener('click', function (e) {
@@ -169,14 +173,11 @@ function forms() {
         calcData.phone = document.querySelector('.final_phone').value;
         document.body.style.overflow = '';
 
-       // let finalJson = JSON.stringify(calcData);
-       let formData = new FormData(this);
-       let obj = {};
-       formData.forEach((value, key) => obj[key] = value);
-       let json = JSON.stringify(obj);
+
+        let finalJson = JSON.stringify(calcData);
 
 
-        function postFinalData(data) {
+        function postFinalData() {
             return new Promise(function (resolve, reject) {
                 let request = new XMLHttpRequest();
 
@@ -194,7 +195,7 @@ function forms() {
                     }
                 }
 
-                request.send(data);
+                request.send(finalJson);
             });
         }
 
@@ -203,8 +204,7 @@ function forms() {
                 input[i].value = '';
             }
         }
-
-        postFinalData(json)
+        postFinalData(calcData)
             .then(() => statusMessage.innerHTML = message.loading)
             .then(() => statusMessage.innerHTML = message.success)
             .catch(() => statusMessage.innerHTML = message.failure)
@@ -215,13 +215,18 @@ function forms() {
         calcEnd.style.display = 'none';
         overlay.style.display = 'none';
         document.body.style.overflow = '';
+
     });
 
     middleClose.addEventListener('click', function () {
         calcProfile.style.display = 'none';
         overlay.style.display = 'none';
         document.body.style.overflow = '';
+
     });
+
+
+
 
 
     for (let i = 0; i < checkbox.length; i++) {
@@ -230,7 +235,10 @@ function forms() {
                 checkboxTag[i].checked = false;
             }
             this.checked = true;
+
         });
     }
-}
-module.exports = forms;
+
+    }
+
+    module.exports = forms;
